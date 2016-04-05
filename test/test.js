@@ -38,4 +38,16 @@ describe("BALLOON", function(){
     assert.equal(result, "spare balloons : 5");
   });
 
+  it("balloon.leastLeft should return least balloons left after pop.", function(){
+    var balloon = new BalloonOrder(pricesStr, orderStr, poppedStr);
+    var result = balloon.leastLeft;
+    assert.deepEqual(result, {colour: "yellow", quantity: 6});
+  });
+
+  it("balloon.leastLeft should return least balloons left after pop.", function(){
+    var balloon = new BalloonOrder(pricesStr, orderStr, poppedStr);
+    var result = balloon.mostLeft;
+    assert.deepEqual(result, {colour: "blue", quantity: 8});
+  });
+
 });
